@@ -383,6 +383,10 @@ public class MenuEntrySwapperPlugin extends Plugin
             swap("outside", option, target, true);
         }
 
+        if (option.equals("remove") && target.contains("crafting")) {
+            swap("teleport", option, target, true);
+        }
+
 		if (option.equals("talk-to"))
 		{
 
