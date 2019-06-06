@@ -371,8 +371,25 @@ public class MenuEntrySwapperPlugin extends Plugin
 			return;
 		}
 
+//        if (target.contains("guild trophy space") && option.contains("walk here")) {
+//            swap("build", option, target, true);
+//        }
+//
+//        if (target.contains("mythical cape") && option.equals("teleport")) {
+//            swapPOH("remove", option, target, true);
+//        }
+
+        if (option.equals("cast") && target.equals("teleport to house")) {
+            swap("outside", option, target, true);
+        }
+
 		if (option.equals("talk-to"))
 		{
+
+		    if (target.contains("operator")) {
+		        swap("buy-plank", option, target, true);
+            }
+
 			if (config.swapPickpocket() && target.contains("h.a.m."))
 			{
 				swap("pickpocket", option, target, true);
